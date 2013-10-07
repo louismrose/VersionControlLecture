@@ -12,7 +12,7 @@ When working on a project, you want to be able to keep track of changes. This is
 true for several reasons:
 
 1. Finding bugs becomes easier
-2. Collaboration is facilitated
+2. Collaboration is encouraged
 3. Finding the most up-to-date version becomes trivial
 
 Additionally, version controls can perform the role of backing up your work (if

@@ -14,9 +14,7 @@ true for several reasons:
 1. Finding bugs becomes easier
 2. Collaboration is encouraged
 3. Finding the most up-to-date version becomes trivial
-
-Additionally, version controls can perform the role of backing up your work (if
-used properly!).
+    + Additionally, version controls can perform the role of backing up your work (if used properly!).
 
 Types of Version Control
 ------------------------
@@ -26,12 +24,70 @@ organised into one of two philosophies.
 
 * Centralised
 * Decentralised
-
-We will look at a version control system from each of those categories and
-explain their motivation.
+    + We will look at a version control system from each of those categories and explain their motivation.
 
 Take Away
 ---------
 
 More than being a tutorial on how to *use* version control, this lecture is
 aimed at convincing you that version control is a *good thing*\texttrademark.
+
+Motivation for VCS
+==================
+
+Pre-History
+-----------
+
+* None
+* Filename+version:
+    "project_v1.py", "mycode20131012.java"
+* Edit scripts using diff utility
+
+
+A History
+---------
+
+* Source Code Control System (SCCS)
+* Revision Control System (RCS)
+
+Modern Era
+----------
+
+Huge number of choices with many different approaches: SVN, Git, BitKeeper,
+Darcs, Bazaar, Mercurial, GHU arch and many many more.
+
+Approaches to VCSs
+==================
+
+Two Philosophies
+----------------
+
+1. Centralised
+2. Distributed
+
+Apache Subversion
+=================
+
+Basics
+------
+
+Pros
+------
+
+Cons
+------
+
+Git
+=================
+
+Basics
+------
+
+Pros
+------
+
+Cons
+------
+
+bleh
+

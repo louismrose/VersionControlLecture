@@ -59,17 +59,59 @@ Darcs, Bazaar, Mercurial, GHU arch and many many more.
 Approaches to VCSs
 ==================
 
+Some Terminology
+----------------
+
+1. Repository (repo): 
+
+Some Terminology
+----------------
+
+2. Clone: A copy of a repository
+
+Some Terminology
+----------------
+
+3. Branches: Orthogonal sets of changes with a repo
+
+Some Terminology
+----------------
+
+4. Commit: 
+
+Some Terminology
+----------------
+
+5. Conflict: 
+
+Some Terminology
+----------------
+
+6. Merge:
+
 Two Philosophies
 ----------------
 
 1. Centralised
+    * There is a canonical repository
+    * In order to commit a change, you must have access to the central repo
 2. Distributed
+    * Each clone (copy) is equally valid
+    * Commits happen on local repo
+
+
 
 Apache Subversion
 =================
 
 Basics
 ------
+
+* Subversion (svn) is a popular *centralised* VCS 
+* All of the departmental computers have svn installed.
+* Version numbers grow sequentially; commit 15 is newer than commit 14
+
+
 
 Pros
 ------

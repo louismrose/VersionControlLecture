@@ -1,2 +1,2 @@
-print ("This algorithm is really sweet!")
+print ("This algorithm is ridiculously sweet!")
 print ("Copyright (c) 2013 Jose & Louis")

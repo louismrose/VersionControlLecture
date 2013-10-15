@@ -51,4 +51,19 @@ In your terminal:
 
 * Register who you are with Git: 
 
-    git config --global user.name "Your Name"
+~~~
+git config --global user.name "Your Name"
+~~~
+
+* Register your email with Git: 
+
+~~~
+git config --global user.email "your.username@some.domain.com"
+~~~
+
+* Register your editor of choice with Git:
+
+~~~
+git config --global core.editor your_fav_editor
+~~~
+

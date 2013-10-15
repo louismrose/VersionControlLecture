@@ -62,7 +62,7 @@ Approaches to VCSs
 Some Terminology
 ----------------
 
-1. Repository (repo): 
+1. Repository (repo): Where files and historical data are stored.
 
 Some Terminology
 ----------------
@@ -72,22 +72,25 @@ Some Terminology
 Some Terminology
 ----------------
 
-3. Branches: Orthogonal sets of changes with a repo
+3. Branches: When a project is branched or forked two copies of those files may
+develop independently of each other.
 
 Some Terminology
 ----------------
 
-4. Commit: 
+4. Commit (verb): To store a set of changes to a repository.
+4. Commit (noun): A specific revision of a repository.
 
 Some Terminology
 ----------------
 
-5. Conflict: 
+5. Conflict: When two changes are made to the same part of a project and cannot
+be resolved automatically.
 
 Some Terminology
 ----------------
 
-6. Merge:
+6. Merge: Combine two sets of changes.
 
 Two Philosophies
 ----------------
@@ -109,27 +112,57 @@ Basics
 
 * Subversion (svn) is a popular *centralised* VCS 
 * All of the departmental computers have svn installed.
-* Version numbers grow sequentially; commit 15 is newer than commit 14
+* Version numbers grow sequentially; revision 15 is newer than revision 14
+
+Basics 2
+--------
+
+![Server](figures/cylinder.jpg)
 
 
+Basics 2
+--------
+
+![Local](figures/triangle.jpg)
+
+
+Basics 2
+--------
+
+![Commit/Push](figures/svncommit.jpg)
+
+Basics 2
+--------
+
+![Update/Pull](figures/svnupdate.jpg)
 
 Pros
 ------
 
+* Works as you would expect
+* There is never question about what code your changes must be based on
+* Lots and lots of documentation, books, and online resources
+
 Cons
 ------
+
+* Encourages large commits
+* Branching is discouraged
+* If the server goes down...
 
 Git
 =================
 
-Basics
-------
-
 Pros
-------
+-----
+
+* Encourages small commits
+* Is being used increasingly
+* Encourages branching!
+* No single point of failure
 
 Cons
-------
+-----
 
-bleh
-
+* Can be difficult
+* Requires that everyone on the team knows how to use it well

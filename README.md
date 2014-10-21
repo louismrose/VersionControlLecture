@@ -15,10 +15,7 @@ Why You're Here
 Using version control is a good habit to get into. It not only allows you to
 keep track of your changes and collaborate it others, it allows you to reverse
 time in a project in order to inspect a bug or see how a project has evolved.
-
-Most likely you are here because you saw the SEPR lecture on version control. And,
-despite how everything went wrong during the practical portion, you were
-convinced that there might be something to this whole version control thing.
+Most likely you are here because you saw the SEPR lecture on version control.
 
 This document will focus on Git since that's what I know best and use in the
 department every day. If you are looking for resources on SVN please see the
@@ -32,19 +29,31 @@ Getting Started With Git
 Let's take a whirlwind tour through git showing some of the cool features, then
 we'll come back on focus on each feature in more detail. But first things first.
 
+Installing Git
+--------------
+
+If you're on Linux, then you're all set. If you're on Windows (shame on you),
+then you'll have to install Git Bash. Luckily, this can be installed locally on
+your student account. The link for download is at the [Official Git Website.](http://git-scm.com/)
+
+Follow the "Download git for X" link on that page. ('X' Should be the OS you're
+on).
+
 Setting Things Up
 -----------------
 
-Git needs to know who you are and how to contact you. Not for Git itself, but so
-that others you are collaborating with know who made what changes. So let's get
-that out of the way.
+Once you have Git installed, open up your terminal. On Linux, this is whatever
+terminal you happen to use, on Windows this means launching 'Git Bash' from the
+Start Menu.
+
+A big part of any version control system is enabling collaboration. For this
+reason Git needs to know your name and email, this is so that the people you
+are collaborating with know who made what changes, and how to contact that
+person. So let's get that out of the way.
 
 If you're using Windows as your operating system, open Git Bash. If you're
-sensible and using Linux, open up a terminal. (Note: During the practical
-portion of the lecture there were *many* issues with Git Bash. I have since
-found the appropriate work-arounds, so there shouldn't be anything stopping you
-from using Windows if you want. If you're still having issues, let me know).
-From this point on, **unless I say otherwise** when I say `In your terminal...' 
+sensible and using Linux, open up a terminal. Please note: from this point
+on, **unless I say otherwise** when I say `In your terminal...' 
 I am referring to both the Linux terminal and to Git Bash.
 
 In your terminal:

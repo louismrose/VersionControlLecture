@@ -1,6 +1,6 @@
 %Version Control
 %José Manuel Calderón Trilla
-%Oct, 2013
+%Oct, 2014
 
 Introduction
 ============
@@ -54,7 +54,13 @@ Modern Era
 ----------
 
 Huge number of choices with many different approaches: SVN, Git, BitKeeper,
-Darcs, Bazaar, Mercurial, GHU arch and many many more.
+Darcs, Bazaar, Mercurial, GNU arch and many many more.
+
+Nightmares
+----------
+
+* Better than paper cups/post-it notes.
+* Better than everyone editing a shared directory.
 
 Approaches to VCSs
 ==================

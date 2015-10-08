@@ -11,41 +11,37 @@ Lecture is being held on 16th Oct 2015.
 Why You're Here
 ===============
 
-As you will find out if you skim the slides, Version Control Systems (VCSs from now on) are widely used nowadays to keep track of changes in code, enhance collaboration and keep backups. Many of you may have never heard this term again but don't worry, I firstly heard about VCSs 6 years after my first CS module at a university level so taking into account that you're 2nd years students I am sure that you will master it.
+As you will find out if you skim the slides, Version Control Systems (VCSs from now on) are widely used nowadays to keep track of changes in code, enhance collaboration and keep backups. Many of you may had never heard this term before but don't worry, I firstly heard about VCSs 6 years after my first CS module at a university level so taking into account that you're 2nd years students I am sure that you will master them.
 
-This document includes instructions on the 1st part of the practical session that follows the theory. On the practical we will focus on the (maybe the most) widely used VCS named Git. SVN is popular as well so for those who prefer to use SVN instead of Git there's a file, called SVN-links.md, where you can find useful resources on it. In case you want to share more resources on Git or SVN please drop me an email at amz502@york.ac.uk or submit them through a request on this Git project.
+This document includes instructions on the 1st and 2nd parts of the practical session that follows the theory. On the practical we will focus on the (maybe the most) widely used VCS named Git. SVN is popular as well so for those who prefer to use SVN instead of Git there's a file, called SVN-links.md (provide by Jose Calderon), where you can find useful resources for it. In case you want to share more resources on Git or SVN please drop me an email at amz502@york.ac.uk or submit them through a pull request in this Git project.
 
-Part 1: The Basics (aka the 80% of what you will do with Git ever in your life)
+Part 1: The Basics (aka the 80% of what you will ever do with Git in your life)
 ========================
 
-In the first you will be asked to do some exercises on your own to understand the basic functionality of Git. Before starting with the exercises, you first need to make sure that you have Git installed and configured.
+In the first part you will be asked to do some exercises on your own to understand the basic functionality of Git. Before starting with the exercises, you need to make sure that you have Git installed and configured. Instructions follow. In case you have any problems ask the PTAs or myself for help.
 
 Installing Git
 --------------
 
-If you're on Linux, then you're all set. If you're on Windows (shame on you),
+If you're on Linux or Mac, then you're all set. If you're on Windows,
 then you'll have to install Git Bash. Luckily, this can be installed locally on
-your student account. The link for download is at the [Official Git Website.](http://git-scm.com/)
+your student account. The link for download is at the [Official Git Website.](http://git-scm.com/downloads)
 
-Follow the "Download git for X" link on that page. ('X' Should be the OS you're
-on).
+Pick the Windows Operating system, download and follow the instalation instructions.
 
-Setting Things Up
+Configuration
 -----------------
 
 Once you have Git installed, open up your terminal. On Linux, this is whatever
 terminal you happen to use, on Windows this means launching 'Git Bash' from the
-Start Menu.
+Start Menu and or Mac the Terminal app.
 
 A big part of any version control system is enabling collaboration. For this
 reason Git needs to know your name and email, this is so that the people you
 are collaborating with know who made what changes, and how to contact that
-person. So let's get that out of the way.
+person. So let's do that.
 
-If you're using Windows as your operating system, open Git Bash. If you're
-sensible and using Linux, open up a terminal. Please note: from this point
-on, **unless I say otherwise** when I say `In your terminal...' 
-I am referring to both the Linux terminal and to Git Bash.
+If you're on Windows, open Git Bash otherwise whatever you use as terminal.
 
 In your terminal:
 
@@ -54,18 +50,16 @@ In your terminal:
 ~~~
 git config --global user.name "Your Name"
 ~~~
+Example: git config --global user.name "John Doe"
 
 * Register your email with Git: 
 
 ~~~
 git config --global user.email "your.username@some.domain.com"
 ~~~
+Example: git config --global user.email "john.doe@york.ac.uk"
 
-* Register your editor of choice with Git:
-
-~~~
-git config --global core.editor your_fav_editor
-~~~
+That's it, you're done installing and configuring Git.
 
 Starting off
 ------------

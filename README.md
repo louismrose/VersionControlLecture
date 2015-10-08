@@ -1,33 +1,24 @@
 Version Control
 ===============
 
-Repository for VC lecture for University of York's SEPR module.
+Repository for Version Control lecture for University of York's SEPR module.
 
-Lecture is being held on 14th Oct 2013.
+Lecture is being held on 16th Oct 2015.
 
-The images used for the SVN portion of the talk were taken from 'Version Control
-By Example'.
+© The slides and the practical session are inspired by Jose Calderon's work. Images are taken from wikimedia and pixabay and are labelled as free for reuse.
 
 
 Why You're Here
 ===============
 
-Using version control is a good habit to get into. It not only allows you to
-keep track of your changes and collaborate it others, it allows you to reverse
-time in a project in order to inspect a bug or see how a project has evolved.
-Most likely you are here because you saw the SEPR lecture on version control.
+As you will find out if you skim the slides, Version Control Systems (VCSs from now on) are widely used nowadays to keep track of changes in code, enhance collaboration and keep backups. Many of you may have never heard this term again but don't worry, I firstly heard about VCSs 6 years after my first CS module at a university level so taking into account that you're 2nd years students I am sure that you will master it.
 
-This document will focus on Git since that's what I know best and use in the
-department every day. If you are looking for resources on SVN please see the
-SVN-Links.md file in this repo. If you know of other sources that may be useful
-to other students, please let me know; either through a pull-request on Github,
-or email me at jmc512@york.ac.uk .
+This document includes instructions on the 1st part of the practical session that follows the theory. On the practical we will focus on the (maybe the most) widely used VCS named Git. SVN is popular as well so for those who prefer to use SVN instead of Git there's a file, called SVN-links.md, where you can find useful resources on it. In case you want to share more resources on Git or SVN please drop me an email at amz502@york.ac.uk or submit them through a request on this Git project.
 
-Getting Started With Git
+Part 1: The Basics (aka the 80% of what you will do with Git ever in your life)
 ========================
 
-Let's take a whirlwind tour through git showing some of the cool features, then
-we'll come back on focus on each feature in more detail. But first things first.
+In the first you will be asked to do some exercises on your own to understand the basic functionality of Git. Before starting with the exercises, you first need to make sure that you have Git installed and configured.
 
 Installing Git
 --------------

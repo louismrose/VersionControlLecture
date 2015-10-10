@@ -15,10 +15,13 @@ As you will find out if you skim the slides, Version Control Systems (VCSs from 
 
 This document includes instructions on the 1st and 2nd parts of the practical session that follows the theory. On the practical we will focus on the (maybe the most) widely used VCS named Git. SVN is popular as well so for those who prefer to use SVN instead of Git there's a file, called SVN-links.md (provide by Jose Calderon), where you can find useful resources for it. In case you want to share more resources on Git or SVN please drop me an email at amz502@york.ac.uk or submit them through a pull request in this Git project.
 
+As shown in the slides, there are different GUIs for Git that can be used (and may make your life easier if you're not fan of the command line). I personally prefer to use GUIs and more specifically "SourceTree" which is available to download from [here.](https://www.sourcetreeapp.com/) For the 1st part of the practical we will work using the terminal as we need to perform simpler tasks. During the 2nd part where I will demostrate the collaborative aspects of Git I will use SourceTree.
+
 Part 1: The Basics (aka the 80% of what you will ever do with Git in your life)
 ========================
 
 In the first part you will be asked to do some exercises on your own to understand the basic functionality of Git. Before starting with the exercises, you need to make sure that you have Git installed and configured. Instructions follow. In case you have any problems ask the PTAs or myself for help.
+
 
 Installing Git
 --------------
@@ -61,42 +64,43 @@ Example: git config --global user.email "john.doe@york.ac.uk"
 
 That's it, you're done installing and configuring Git.
 
-Starting off
+Execrices
 ------------
 
-Now that you have git set up, let's make a repository. 
-
-* Create a new directory and move into it
+1) 
+i] Create a directory
+This is your project directory. As part of this practical let's say that this is a folder named 'LearnGit'. Navigate to the desired place in your filesystem (e.g. Dekstop) and create the 'LearnGit' folder. This can be done by either using the file manager of your OS or by running in the terminal the following commands (make sure that you have navigated to the appropriate location - e.g. Desktop - before running the mkdir command).
 
 ~~~
-mkdir learnGit
-cd learnGit
+mkdir LearnGit
+cd LearnGit
 ~~~
 
-* As every good project has a README, let's create that first
+ii] As every good project has a README, let's create that first. Again you can do this by using your favorite text editor (save the .txt file inside the folder you created before - e.g. Desktop/LearnGit/Readme.txt) or by running the following command in the terminal.
 
 ~~~
 echo "This project is for learning the git VCS tool" > README
 ~~~
 
-* Now that you have a file, let's track it with git!
-    First we have to initialise this directory as a repository
+iii] Now that you have a file, let's track it with git! First we have to initialise this directory as a repository
 
 ~~~
 git init
 ~~~
 
-* Now we have a repo, but git does _not_ track all files automatically
-    (this is useful with development because having git keep track of 
-    generated files like .o or binaries would be a waste of space).
-    We can tell git to track a file with
+This creates all the files needed for Git. If you have hidden files enabled in your machine you will be able to see a semi-transparent folder created in the LearnGit folder named ".git".
+
+iv] Now we have a repo, but git does _not_ track all files automatically. This is useful beacuse we only need Git to track the files we need to version. For example, versioning binary files it's a waste of space. Of course we can also prompt git to ignore files that could possibly be tracked by initializing a .gitignore file but more on that will follow.
+
+In order to ask git to track a file we need to _stage_ it. This is done by using the following command:
 
 ~~~
-git add README
+git add Readme.txt
 ~~~
 
-* Now if we run `git status` we should see something very much like the
-    following
+(Readme.txt is the name of the file we need Git to track.)
+
+v] Now if we run the command `git status` we should see something very much like the following.
 
 ~~~
 git status
@@ -107,55 +111,44 @@ git status
 \# Changes to be committed:
 \#   (use "git rm --cached <file>..." to unstage)
 \#
-\#   new file:   README
+\#   new file:   Readme.txt
 \#
 ~~~
 
 What this is telling us is that we have no history so far ('Initial commit')
 and a list of changes that will be commited *if* we commit.
 
-* Commit by typing
+vi] The file is now tracked, but we need to commit it to the repository. This is done by the following command:
 
 ~~~
-git commit
+git commit -m "Creation of the Readme file"
 ~~~
 
-This should load up the editor you confugred git to use. The convention is
-to write a one line summary of the changes and then a more detailed
-explanation of the commit. In this case since this is the inital commit,
-there isn't much to say as we haven't changed anything! So for this commit
-we'll just say "Initial commit". 
+Where "Creation of the Readmin file" is a short description of what are the changes that we are about to commit to the repository. In this case just the fact that we created the Readme file.
 
-Save the file and quit the editor. Once you quit git will take the message
-and create the commit. 
+You can now check the `git log` to see the history of your repository.
 
-Now you have a full-fledged repo. You can quickly look at the repo's history
-with `git log`. There isn't much history, but it's there.
-
-Let's explore a little further.
-
-* Create a new file in the directory but do not add it to git.
+vii] Let's create a new file in the directory but *do not add* it to git. Do this by either using the file manager of your operating system or by typing the following command to the terminal.
 
 ~~~
 touch newFile
 ~~~
 
-* Check the status of the repo with
+viii] Check the status of the repo with
 
 ~~~
 git status
 ~~~
 
-Try to make sense of the output, but do not change anything (like running
-`git add`)
+Can you understand what the status describes? 
 
-* Make a change to README
+ix) Let's update the Readme.txt file we created at the beginning. Open the file with your favorite text editor, add a new line and save the file. For those you prefer the terminal you can quickly add a new line of text by typing the following command:
 
 ~~~
-echo "AUTHORS: JMCT" >> README
+echo "This is a new line into the Readme file..." >> Readme.txt
 ~~~
 
-Now the README has a second line, let's see what git makes of this
+Now check the status of the repository. It should look like this:
 
 ~~~
 git status
@@ -164,7 +157,7 @@ git status
 /#   (use "git add <file>..." to update what will be committed)
 /#   (use "git checkout -- <file>..." to discard changes in working directory)
 /#
-/#   modified:   README
+/#   modified:   Readme.txt
 /#
 /# Untracked files:
 /#   (use "git add <file>..." to include in what will be committed)
@@ -179,27 +172,21 @@ However, because README is being tracked by git already, git is able
 to *discard* the changes! That's already useful. No matter how many changes
 we make to a file we can always go back to a previous version.
 
-For now let's commit the changes to README
+As an exercise, stage (hint: add) the Readme.txt file and commit the changes to the repository. Don't do anything with the newFile.
 
-* As an exercise, add README to the commit, then commit the changes.
-    Do not add newFile to the commit.
+x) Say that the newFile we created is a file we don't need to version or share. However, it annoyingly appears everytime you type `git status`. In order to tell git to ignore this file you need to add its filename to a special file that is called .gitignore . Let's do it. 
 
-As you make more changes have 'newFile' always appear when you call `git status`.
-The way to avoid this is by making a .gitignore file. This contains a list of
-regular expressions that tell git which files to ignore. So
-
-* Add newFile to .gitignore
+Type the following to the terminal:
 
 ~~~
 echo "newFile" > .gitignore
 ~~~
 
-If you run `git status` you'll see that git is telling you that .gitignore
+This command creates a new file named .gitignore and adds the line "newFile" into it. The same could be done by using your favorite text editor (i.e. create a new text file, write newFile in it, close and save it as ".gitignore". NB.: In some cases the operating system will automatically add the .txt extension to your .gitignore file renaming it to .gitignore.txt. This will not work as git won't see the file. Make sure that your file has an empty name and the .gitignore extention. If you don't know how to make it work please ask one of us :) )
+
+If you now run `git status` you'll see that git is telling you that .gitignore
 is not being tracked, but you'll also notice that there is no mention
 of newFile!
 
-* Tell git to track .gitignore and commit.
-
-At this point, you have the basics of git for single person use. We'll
-get to multi-person use soon
+xi) Tell git to track .gitignore and commit this file to the repository.
 

@@ -257,4 +257,15 @@ This leads us to the most tricky part of Git which has to do with collaboration.
 Part 2: Collaboration (aka conflicts!)
 ========================
 
+At the beginning I will show you how to work using a GUI rather than the terminal for Git. I selected SourceTree - you can pick your favorite as most of them work the same way.
+I will then demo you a common scenario of collaboration that involves conflicts.
+
+Part 3: Collaborate with your team members
+========================
+Having a versioning system for your team's project is not a requirement for SEPR however it will help you develop software by following the standards that are now followed in the industry. I encourage you to use one. Those teams who want to use one can spent the time left to do some work on it. 
+
+For example you can check different GUIs and find the one that works best for you individually (rememeber you don't need to use the same. Some members of your team may prefer the terminal, others SourceTree and so on.) 
+Then register for a Git repository. Pick the provider you prefer. I suggest either GitHub or BitBucket. Try to share (add, commit, push) some of the artefacts you already created during your first meetings. Try to edit the same files, commit/push them and resolve conflicts. 
+
+Remember that the best way to learn is by failing so don't worry if you see red messages marks after you pushed or pulled something. Try to understand why it happened and fix it. We are more than happy to help.
 

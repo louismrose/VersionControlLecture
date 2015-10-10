@@ -67,7 +67,7 @@ That's it, you're done installing and configuring Git.
 Execrices
 ------------
 
-1) 
+1) Versioning
 i] Create a directory
 This is your project directory. As part of this practical let's say that this is a folder named 'LearnGit'. Navigate to the desired place in your filesystem (e.g. Dekstop) and create the 'LearnGit' folder. This can be done by either using the file manager of your OS or by running in the terminal the following commands (make sure that you have navigated to the appropriate location - e.g. Desktop - before running the mkdir command).
 
@@ -189,4 +189,72 @@ is not being tracked, but you'll also notice that there is no mention
 of newFile!
 
 xi) Tell git to track .gitignore and commit this file to the repository.
+
+2) Branching
+The first example/exercise introduced you to the basic versioning functionality. Sometime it is needed to fork one repository and work on a different *branch* than the *master*. In this set of exercises we will create a branch, add and commit some file to it and then merge it back to the master branch.
+
+i] Continue to where you left at the previous step. Type the following command in your terminal:
+
+~~~
+git checkout -b "myNewBranch"
+~~~
+
+You should receive a message like the following:
+
+~~~
+Switched to a new branch 'myNewBranch'
+~~~
+
+This is it you just created and switched to your new branch. Everything you add and commit now will be part of this branch.
+
+ii] Check the branches available on the repository by typing the command:
+
+~~~
+git branch
+~~~
+
+Try to understand what the output suggests.
+
+iii] Now create one (or more) new document(s), add and commit it(them) to the new branch. 
+
+iv] If you now type `git status` you will find out that the first line reveals the branch you're working on and if you did everything correctly that there's no file needed to be staged or committed. Make an experiment to understand what a branch is. Type the following command that switches you back to the master branch:
+
+~~~
+git checkout master
+~~~
+
+You will receive a message like this: `Switched to branch 'master'`. Now check your folder. The files you created as part of the myNewBranch branch are not there! Don't panic because they are not lost. They are still there but right now you asked git to bring everything that is part of the master branch. The files of the myNewBranch are not part of it se they were removed. Let's bring them back. Type:
+
+~~~
+git checkout myNewBranch
+~~~
+
+Now you're back to your new branch and the previously missing files are back there. Phew...
+
+v] Let's say that you finished working on the new fantastic feature of your project that you've implemented in this new branch, you tested it, it works and you are now ready to merge it with everything else (i.e. the files that are in the master branch).
+
+First of all switch to the master branch. You now know how to do it (hint: git checkout master) 
+Type the following:
+
+~~~
+git merge myNewBranch
+~~~
+
+You will receive the following output (not exactly the same as the commit id will be different)
+
+~~~
+Updating fecba8e..0b63991
+Fast-forward
+ branchTest.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 branchTest.txt
+~~~
+
+This is it. You created a branch, you implemented code in that branch without annoying the people working on other branches (e.g. the master branch) and when you finished you merged your code to the master.
+
+This leads us to the most tricky part of Git which has to do with collaboration.
+
+Part 2: Collaboration (aka conflicts!)
+========================
+
 

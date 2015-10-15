@@ -79,7 +79,7 @@ cd LearnGit
 ii] As every good project has a README, let's create that first. Again you can do this by using your favorite text editor (save the .txt file inside the folder you created before - e.g. Desktop/LearnGit/Readme.txt) or by running the following command in the terminal.
 
 ~~~
-echo "This project is for learning the git VCS tool" > README
+echo "This project is for learning the git VCS tool" > Readme.txt
 ~~~
 
 iii] Now that you have a file, let's track it with git! First we have to initialise this directory as a repository
@@ -90,7 +90,7 @@ git init
 
 This creates all the files needed for Git. If you have hidden files enabled in your machine you will be able to see a semi-transparent folder created in the LearnGit folder named ".git".
 
-iv] Now we have a repo, but git does _not_ track all files automatically. This is useful beacuse we only need Git to track the files we need to version. For example, versioning binary files it's a waste of space. Of course we can also prompt git to ignore files that could possibly be tracked by initializing a .gitignore file but more on that will follow.
+iv] Now we have a repo, but git does _not_ track all files automatically. This is useful beacuse we only need Git to track the files we need to version. For example, versioning binary files it's a waste of space. Of course we can also prompt git to ignore files that could possibly be tracked, by initializing a .gitignore file but more on that will follow.
 
 In order to ask git to track a file we need to _stage_ it. This is done by using the following command:
 
@@ -131,7 +131,7 @@ You can now check the `git log` to see the history of your repository.
 vii] Let's create a new file in the directory but *do not add* it to git. Do this by either using the file manager of your operating system or by typing the following command to the terminal.
 
 ~~~
-touch newFile
+touch newFile.txt
 ~~~
 
 viii] Check the status of the repo with
@@ -142,7 +142,7 @@ git status
 
 Can you understand what the status describes? 
 
-ix) Let's update the Readme.txt file we created at the beginning. Open the file with your favorite text editor, add a new line and save the file. For those you prefer the terminal you can quickly add a new line of text by typing the following command:
+ix) Let's update the *Readme.txt* file we created at the beginning. Open the file with your favorite text editor, add a new line and save the file. For those you prefer the terminal you can quickly add a new line of text by typing the following command:
 
 ~~~
 echo "This is a new line into the Readme file..." >> Readme.txt
@@ -179,19 +179,19 @@ x) Say that the newFile we created is a file we don't need to version or share. 
 Type the following to the terminal:
 
 ~~~
-echo "newFile" > .gitignore
+echo "newFile.txt" > .gitignore
 ~~~
 
-This command creates a new file named .gitignore and adds the line "newFile" into it. The same could be done by using your favorite text editor (i.e. create a new text file, write newFile in it, close and save it as ".gitignore". NB.: In some cases the operating system will automatically add the .txt extension to your .gitignore file renaming it to .gitignore.txt. This will not work as git won't see the file. Make sure that your file has an empty name and the .gitignore extention. If you don't know how to make it work please ask one of us :) )
+This command creates a new file named .gitignore and adds the line "newFile.txt" into it. The same could be done by using your favorite text editor (i.e. create a new text file, write newFile in it, close and save it as ".gitignore". NB.: In some cases the operating system will automatically add the .txt extension to your .gitignore file renaming it to .gitignore.txt. This will not work as git won't see the file. Make sure that your file has an empty name and the .gitignore extention. If you don't know how to make it work please ask one of us :) )
 
 If you now run `git status` you'll see that git is telling you that .gitignore
 is not being tracked, but you'll also notice that there is no mention
-of newFile!
+of newFile.txt!
 
 xi) Tell git to track .gitignore and commit this file to the repository.
 
 2) Branching
-The first example/exercise introduced you to the basic versioning functionality. Sometime it is needed to fork one repository and work on a different *branch* than the *master*. In this set of exercises we will create a branch, add and commit some file to it and then merge it back to the master branch.
+The first example/exercise introduced you to the basic versioning functionality. Sometimes it is needed to fork one repository and work on a different *branch* than the *master*. In this set of exercises we will create a branch, add and commit some file to it and then merge it back to the master branch.
 
 i] Continue to where you left at the previous step. Type the following command in your terminal:
 
@@ -215,15 +215,17 @@ git branch
 
 Try to understand what the output suggests.
 
-iii] Now create one (or more) new document(s), add and commit it(them) to the new branch. 
+iii] Now create one (or more) new document(s), *add* and *commit* it(them) to the new branch. 
 
-iv] If you now type `git status` you will find out that the first line reveals the branch you're working on and if you did everything correctly that there's no file needed to be staged or committed. Make an experiment to understand what a branch is. Type the following command that switches you back to the master branch:
+iv] If you now type `git status` you will find out that the first line reveals the branch you're working on and if you did everything correctly that there's no file needed to be staged or committed. 
+
+Make the following experiment to understand what a branch is. Type the following command that switches you back to the master branch:
 
 ~~~
 git checkout master
 ~~~
 
-You will receive a message like this: `Switched to branch 'master'`. Now check your folder. The files you created as part of the myNewBranch branch are not there! Don't panic because they are not lost. They are still there but right now you asked git to bring everything that is part of the master branch. The files of the myNewBranch are not part of it se they were removed. Let's bring them back. Type:
+You will receive a message like this: `Switched to branch 'master'`. Now check your folder. The files you created as part of the myNewBranch branch are not there! Don't panic because they are not lost. They are still there but right now you asked git to bring everything that is part of the *master* branch. The files of the *myNewBranch* are not part of it so they were removed. Let's bring them back. Type:
 
 ~~~
 git checkout myNewBranch
@@ -267,5 +269,5 @@ Having a versioning system for your team's project is not a requirement for SEPR
 For example you can check different GUIs and find the one that works best for you individually (rememeber you don't need to use the same. Some members of your team may prefer the terminal, others SourceTree and so on.) 
 Then register for a Git repository. Pick the provider you prefer. I suggest either GitHub or BitBucket. Try to share (add, commit, push) some of the artefacts you already created during your first meetings. Try to edit the same files, commit/push them and resolve conflicts. 
 
-Remember that the best way to learn is by failing so don't worry if you see red messages marks after you pushed or pulled something. Try to understand why it happened and fix it. We are more than happy to help.
+Remember that the best way to learn is by failing so don't worry if you see red messages after you pushed or pulled something. Try to understand why it happened and fix it. We are more than happy to help.
 

@@ -68,6 +68,7 @@ Execrices
 ------------
 
 1) Versioning
+
 i] Create a directory
 This is your project directory. As part of this practical let's say that this is a folder named 'LearnGit'. Navigate to the desired place in your filesystem (e.g. Dekstop) and create the 'LearnGit' folder. This can be done by either using the file manager of your OS or by running in the terminal the following commands (make sure that you have navigated to the appropriate location - e.g. Desktop - before running the mkdir command).
 
@@ -128,7 +129,7 @@ Where "Creation of the Readmin file" is a short description of what are the chan
 
 You can now check the `git log` to see the history of your repository.
 
-vii] Let's create a new file in the directory but *do not add* it to git. Do this by either using the file manager of your operating system or by typing the following command to the terminal.
+vii] Let's create a new file in the directory but **do not add** it to git. Do this by either using the file manager of your operating system or by typing the following command to the terminal.
 
 ~~~
 touch newFile.txt
@@ -142,7 +143,7 @@ git status
 
 Can you understand what the status describes? 
 
-ix) Let's update the *Readme.txt* file we created at the beginning. Open the file with your favorite text editor, add a new line and save the file. For those you prefer the terminal you can quickly add a new line of text by typing the following command:
+ix) Let's update the **Readme.txt** file we created at the beginning. Open the file with your favorite text editor, add a new line and save the file. For those you prefer the terminal you can quickly add a new line of text by typing the following command:
 
 ~~~
 echo "This is a new line into the Readme file..." >> Readme.txt
@@ -191,7 +192,7 @@ of newFile.txt!
 xi) Tell git to track .gitignore and commit this file to the repository.
 
 2) Branching
-The first example/exercise introduced you to the basic versioning functionality. Sometimes it is needed to fork one repository and work on a different *branch* than the *master*. In this set of exercises we will create a branch, add and commit some file to it and then merge it back to the master branch.
+The first example/exercise introduced you to the basic versioning functionality. Sometimes it is needed to fork one repository and work on a different **branch** than the **master**. In this set of exercises we will create a branch, add and commit some file to it and then merge it back to the master branch.
 
 i] Continue to where you left at the previous step. Type the following command in your terminal:
 
@@ -215,7 +216,7 @@ git branch
 
 Try to understand what the output suggests.
 
-iii] Now create one (or more) new document(s), *add* and *commit* it(them) to the new branch. 
+iii] Now create one (or more) new document(s), **add** and **commit** it(them) to the new branch. 
 
 iv] If you now type `git status` you will find out that the first line reveals the branch you're working on and if you did everything correctly that there's no file needed to be staged or committed. 
 
@@ -225,7 +226,7 @@ Make the following experiment to understand what a branch is. Type the following
 git checkout master
 ~~~
 
-You will receive a message like this: `Switched to branch 'master'`. Now check your folder. The files you created as part of the myNewBranch branch are not there! Don't panic because they are not lost. They are still there but right now you asked git to bring everything that is part of the *master* branch. The files of the *myNewBranch* are not part of it so they were removed. Let's bring them back. Type:
+You will receive a message like this: `Switched to branch 'master'`. Now check your folder. The files you created as part of the myNewBranch branch are not there! Don't panic because they are not lost. They are still there but right now you asked git to bring everything that is part of the **master** branch. The files of the **myNewBranch** are not part of it so they were removed. Let's bring them back. Type:
 
 ~~~
 git checkout myNewBranch

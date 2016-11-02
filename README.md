@@ -66,7 +66,7 @@ Example: git config --global user.email "john.doe@york.ac.uk"
 
 That's it, you're done installing and configuring Git.
 
-Execrices
+Exercises
 ------------
 
 1) Versioning

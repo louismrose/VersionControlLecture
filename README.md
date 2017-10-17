@@ -3,7 +3,7 @@ Version Control
 
 Repository for Version Control lecture for University of York's SEPR module.
 
-Lecture is being held on 20-21 Oct 2016.
+Lecture is being held on 18-19 Oct 2017.
 
 © The slides and the practical session are inspired by Jose Calderon's work. Images are taken from wikimedia and pixabay and are labelled as free for reuse.
 
